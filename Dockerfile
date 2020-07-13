@@ -1,7 +1,7 @@
 FROM alpine:3.8
 
 RUN apk --no-cache add python py-pip && \
-    pip install elasticsearch-curator==5.8.1 && \
+    pip install elasticsearch-curator==5.8.1 py-setuptools && \
     apk del py-pip
 
 ENV CRONTABS /etc/crontabs/root
